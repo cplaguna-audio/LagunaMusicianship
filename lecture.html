@@ -13,46 +13,58 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-indigo.min.css"/>
     <link rel="stylesheet" href="stylesheets/global.css"/>
+    <link rel="stylesheet" href="stylesheets/sidebar.css"/>
     <script data-main="js/common" src="js/third_party/requirejs/require.js"></script>
   </head>
   <body>
 
     <div id="header_common"></div>
 
-    <div class="mdl-layout__content lm-content">
-      <table>
-        <tr>
-          <td>
-            <div class="mdl-typography--subhead video_title">
-              Chord Symbols 2
-            </div>
-          </td>
-          <td></td>
-        </tr>
-        <tr>
-          <td class="video_container">
-            <iframe class="video_iframe" src="https://www.youtube.com/embed/7zA6JOkJboo" frameborder="0" allowfullscreen></iframe>
-          </td>
-          <td>
-            <div class="info_container">
-              <div class="mdl-card__supporting-text">
-                <!--<div class="lm_subheader">Overview</div><br/>-->
-                In this video, we learn to read all of the chord symbols we didn't
-                get to in part one. This includes diminished, augmented, suspended,
-                minor major, lydian, lydian dominant, dominant flat 9, and altered chords.
-                I play each chord and improvise a little on the underlying scales
-                so you can hear what they sound like.
+    <!-- TODO: Move this somewhere common. Don't forget about the div below lm_content. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+      <div class="mdl-layout__drawer lm_drawer">
+        <span class="mdl-layout-title lm_drawer_title">Introduction To Jazz</span>
+        <nav class="mdl-navigation">
+          <ol>
+          <a class="mdl-navigation__link lm_drawer_link" href=""><li>Course Overview</li></a>
+          <a class="mdl-navigation__link lm_drawer_link" href=""><li>Reading Lead Sheets</li></a>
+          <a class="mdl-navigation__link lm_drawer_link" href=""><li>Chords And Scales Part 1</li></a>
+          <a class="mdl-navigation__link lm_drawer_link" href=""><li>Chords and Scales Part 2</li></a>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="mdl-layout__content lm_content">
+        <table class="content_table">
+          <tr>
+            <td class="video_container">
+              <iframe class="video_iframe" src="https://www.youtube.com/embed/7zA6JOkJboo" frameborder="0" allowfullscreen></iframe>
+            </td>
+            <td class="info_container_td">
+              <div class="info_container">
+                <div class="mdl-card__supporting-text">
+                  <div class="info_title">Chords and Scales Part 2</div>
+                  <ul class="video_overview_list">
+                    <li>Introduce the following chords and scales:</li>
+                    <li>Diminished (octatonic)</li>                
+                    <li>Augmented (lydian augmented)</li>
+                    <li>Minor Major (melodic minor)</li>
+                    <li>Lydian</li>
+                    <li>Lydian Dominant</li>
+                    <li>Dominant flat 9</li>
+                    <li>Altered</li>
+                  </ul>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect resource_link" href="resources/pdfs/intro_jazz/chord_symbol_to_scale_conversion_chart.pdf" target="_blank">
+                    PDF: Chord Symbols
+                  </a>
+                </div>
               </div>
-              <div class="mdl-card__actions mdl-card--border">
-                <!--<div class="lm_subheader mdl-card__supporting-text">Resources</div>-->
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect resource_link" href="resources/pdfs/intro_jazz/chord_symbol_to_scale_conversion_chart.pdf" target="_blank">
-                  PDF: Chord Symbols
-                </a>
-              </div>
-            </div>
-          </td>
-        </tr>
-      </table>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
 
     <div id="footer_common"></div>
